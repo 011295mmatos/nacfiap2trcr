@@ -1,0 +1,12 @@
+- name: Instalando o mariadb
+  apt:
+          name: mariadb-server
+
+- name: Instalando python-pymsql
+  apt:
+          name: python-pymysql
+
+- name: Subindo o mariadb para iniciar no boot
+  service:
+          name: mariadb.service
+          state: started

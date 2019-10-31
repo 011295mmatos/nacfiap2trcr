@@ -1,0 +1,12 @@
+- name: "Criando database my_wiki"
+  mysql_db:
+          name: mediawiki
+          state: present
+          config_file: "/etc/mysql/my.cnf"
+
+- name: "Criando o usuário de acesso ao banco"
+  mysql_user:
+          name: usermedia
+          password: 12345678
+          priv: '*.*:ALL'
+          state: present

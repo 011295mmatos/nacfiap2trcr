@@ -1,0 +1,7 @@
+---
+
+- hosts:
+    - database
+  strategy: free  
+  roles:
+    - { role: banco,  tags: ['banco']  }
